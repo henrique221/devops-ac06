@@ -5,6 +5,7 @@ Definition of urls for django_get_started.
 from datetime import datetime
 from django.conf.urls import patterns, url
 from app.forms import BootstrapAuthenticationForm
+from app.views import candidatos
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -15,6 +16,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'app.views.home', name='home'),
     url(r'^contact$', 'app.views.contact', name='contact'),
+    url(r'^condidatos$', candidatos, name='candidatos'),
     url(r'^about', 'app.views.about', name='about'),
     url(r'^cadastro_cursos', 'app.views.cadastro_cursos', name='cadastro_cursos'),
     url(r'^cadastro_vestibulares', 'app.views.cadastro_vestibulares', name='cadastro_vestibulares'),

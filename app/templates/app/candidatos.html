@@ -1,0 +1,8 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+{% for candidato in candidatos %}
+<p>{{candidato.nome}}</p>
+{% endfor %}
+
+{% endblock %}
